@@ -138,6 +138,7 @@ nav ul li a{
 .product-items{
     padding: 3%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -271,6 +272,7 @@ padding: 7%;
 
 footer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: #E5E4CA;
@@ -305,6 +307,9 @@ footer .center img{
     border-radius: 50%;
     margin-bottom: 5px;
 
+}
+footer .footer-list li a{
+    color: #3E4B39;
 }
 
 footer input{
@@ -365,11 +370,11 @@ footer input:focus{
 }
 
 .social-media i{
-    transition: 0.5s all ease-in;
+    transition: 0.5s all;
 }
 
 .social-media i:hover{
-    transform: scale(1.2) rotate(360deg);
+    transform: scale(1.6) rotate(360deg);
     
 }
 
@@ -429,6 +434,7 @@ footer input:focus{
 
 .hakkimizda .tum-uyeler{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 
@@ -537,12 +543,15 @@ footer input:focus{
     width: 100%;
     padding:120px 7%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .bize-ulasin .ulasin{
-    width: 25%;
+    /* width: 25%; */
     text-align: center;
+    margin-bottom: 20px;
+    flex-grow: 1;
 
 }
 
@@ -561,4 +570,152 @@ footer input:focus{
 
 .bize-ulasin .ulasim p{
     color: #E5E4Ca;
+}
+
+
+
+/* ! menu bolumu */
+
+.menu{
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #3E4B39;
+    padding: 2%;
+
+
+}
+
+.slider{
+    padding-top: 100px;
+    animation: 30s slide infinite;
+}
+
+.slider-content{
+    display: flex;
+    gap: 10px;
+}
+
+.slider-content img{
+    width: 500px;
+    height: 300px;
+    border: 1px solid white;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0px);
+    }
+    12%{
+        transform: translateX(-510px);
+    }
+    24%{
+        transform: translateX(-1020px);
+    }
+    36%{
+        transform: translateX(-1530px);
+    }
+    48%{
+        transform: translateX(-2040px);
+    }
+    60%{
+        transform: translateX(-1530px);
+    }
+    72%{
+        transform: translateX(-1020px);
+    }
+    84%{
+        transform: translateX(-510px);
+    }
+    96%{
+        transform: translateX(0px);
+    }
+}
+
+/* ! Menu Katalog Bölümü */
+.menu-section{
+    position: relative;
+    width: 60%;
+    height: 1000px;
+    background-image: url("img/menu-arkaplan.jpeg");
+    background-size: 93% 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+    border: 5px groove #E5E4CA;
+    margin-top: 50px;
+    /* margin-bottom: 50px;                          */
+}
+
+.menu-logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.menu-section h3{
+    color: #E5E4CA;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.urun{
+    display: flex;
+    justify-content: center;
+}
+
+.urun h4{
+    color: #E5E4CA;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #E5E4CA;
+}
+
+.urun ul li{
+    color: #E5E4CA;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.urun .icecek-left, .urun .tatli-right{
+    width: 50%;
+    padding-inline: 5%;
+    padding-top: 2%;
+}
+.ayrac{
+    height: 600px;
+    border: 2px solid #E5E4CA;
+
+}
+
+.menu-section .yazi{
+    /* text-align: center; */
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    color: #E5E4CA;
+    position: absolute;
+    bottom: 20px;
+    font-size: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-section .menu-btn{
+    background-color: #E5E4CA;
+    border: none;
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+.menu-section .menu-btn{
+    color: #3E4B39;
 }
